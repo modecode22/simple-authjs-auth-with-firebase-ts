@@ -6,10 +6,9 @@ const LogInWithGoogle = () => {
   return (
 <button
 type="button"
-onClick={() => signIn()} className="group duration-100 flex items-center justify-center gap-2 w-full h-12 bg-zinc-800 text-white rounded-md hover:bg-zinc-700 transition-colors">
+onClick={() => signIn("google")} className="group duration-100 flex items-center justify-center gap-2 w-full h-12 bg-gradient-to-br from-rose-800 to-rose-400 text-white rounded-md hover:brightness-90 transition-all">
 LogIn with Google
 <FcGoogle className="w-6 h-6 rounded-full duration-100 transition-all bg-zinc-100/80 group-hover:bg-zinc-100" />
-or Credentials
 </button>
   )
 }
