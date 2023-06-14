@@ -26,7 +26,7 @@ data.data?.user?.image ?
   <h1 className='w-full text-center text-2xl font-bold'>Welcom {data.data?.user?.name} to the App</h1>
   <h1 className='w-full text-center font-bold'>Your E-mail is {data.data?.user?.email}</h1>
 
-<section>
+<section className='w-full flex justify-center items-center flex-col gap-2 my-10'>
   <h4>do you want to logout ? </h4>
   <LogOutButton />
 </section>
