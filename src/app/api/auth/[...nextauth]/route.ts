@@ -19,7 +19,9 @@ export const authOptions: NextAuthOptions = {
          password: { label: 'Password', type: 'password', value: 'password' },
        },
        authorize: async (credentials, req) => {
-         const users = [{ id: '1', username: 'noripi10@example.com', password: 'password' }];
+         const users = [{ id: '1', username: 'noripi10@example.com', password: 'password' },
+         { id: '2', username: 'aaa@example.com', password: 'aaa' },
+         { id: '3', username: 'bbb@example.com', password: 'bbb' }];
          if (credentials) {
            const { username, password } = credentials;
            const user = users.find((e) => e.username === username && e.password === password);
