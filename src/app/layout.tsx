@@ -2,8 +2,8 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import { getServerSession } from 'next-auth';
 import LogIn from '@/components/LogIn';
-import { authOptions } from '@/pages/api/auth/[...nextauth]';
 import Providers from '@/components/Providers';
+import { authOptions } from './api/auth/[...nextauth]/route';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -23,16 +23,9 @@ const session = await  getServerSession(authOptions);
   return (
     <html lang="en">
       <body className={inter.className}>
-<Providers session={session}
->
-      {session ? (
-          <>{children}</>
-        ) : (
-          <>
-            <LogIn />
-          </>
-        )}
-</Providers>
+      <Providers session={session}>
+  {session ? <>{children}</> : <> <LogIn /> </>}
+  </Providers>
       </body>
     </html>
   )

@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import  type { Session  } from 'next-auth'
 import { SessionProvider } from "next-auth/react"
@@ -7,12 +8,15 @@ const Providers = ({
     session
   }: {
     children: React.ReactNode,
-    session :Session | null
+session :null | Session
   }) => {
   return (
+    <>
     <SessionProvider session={session}>
       {children}
-    </SessionProvider>  )
+    </SessionProvider> 
+    </>
+     )
 }
 
 export default Providers
