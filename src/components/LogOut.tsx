@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import LogOutButton from './LogOutButton'
-import { signOut, useSession } from 'next-auth/react'
+import {  useSession } from 'next-auth/react'
 import Image from 'next/image'
 import admin from '../../public/admin.png'
 const LogOut = () => {
