@@ -24,7 +24,7 @@ const session = await  getServerSession(authOptions);
     <html lang="en">
       <body className={inter.className}>
       <Providers session={session}>
-  {session ? <>{children}</> : <> <LogIn /> </>}
+     {session ? <>{children}</> : <> <LogIn /> </>}
   </Providers>
       </body>
     </html>
